@@ -1,0 +1,94 @@
+:root{
+    --game-size : 500px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image:url('images/gameback.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.game-container{
+    height: 100%;
+    width: 100%;
+    max-height: var(--game-size);
+    max-width: var(--game-size);
+    background-color: rgba(12, 7, 61, 0.493);
+    box-shadow: 2px 2px 1px rgb(36, 32, 32);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-grid{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.grid-cell{
+    background-color: rgb(243, 233, 233);
+    height: 32.5%;
+    width: 32.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    user-select: none;
+}
+
+.grid-cell:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 2px rgb(2, 2, 68);
+}
+
+.grid-cell img
+{
+    width: 80%;
+    user-select: none;
+}
+.grid-cell[data-col="2"][data-row="2"]{
+    background-color: rgb(12, 12, 78) !important;
+}
+
+#line{
+    position: absolute;
+    width: 100%;
+    background-color: rgb(197, 235, 135);
+    height: 10px;
+    /* display: none; */
+    transform: translateY(-10px);
+    transition: transform .5s;
+    /* transform: translateY(calc(var(--game-size) / 2)) rotateZ(-45deg); */
+
+}
+
+
+
+
+
+/* .game-grid{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-cell{
+    background-color: rgb(226, 210, 210);
+} */
+

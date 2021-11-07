@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+.container {
+    height: 100vh;
+    background-image: url('images/teahub.io-night-nature-wallpaper-hd-1407894.png');
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    background-blend-mode: luminosity;
+    transition: background5s;
+    /* position: relative; */
+    display: flex;
+}
+
+.container:hover {
+    background-color: rgba(0, 0, 0, 0);
+    background-blend-mode: normal;
+}
+
+#begin-text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 10vh;
+    flex: 1;
+}
+
+.time-container {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 100px);
+    transform: translateY(-50%);
+    margin: 0px 50px;
+}
+
+.column {
+    font-size: 3em;
+    color: darkred;
+    font-weight: 900;
+    animation: blink 1.5s infinite reverse;
+    text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px rgb(218, 78, 78)
+}
+
+.single-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-time span {}
+
+.single-time h2 {
+    font-size: 5em;
+    text-shadow: 0px 0px 0 rgb(137, 156, 213), 1px 1px 0 rgb(129, 148, 205), 2px 2px 0 rgb(120, 139, 196), 3px 3px 0 rgb(111, 130, 187), 4px 4px 0 rgb(103, 122, 179), 5px 5px 0 rgb(94, 113, 170), 6px 6px 0 rgb(85, 104, 161)
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
